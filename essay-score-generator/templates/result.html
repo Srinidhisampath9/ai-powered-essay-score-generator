@@ -1,0 +1,42 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #11998e, #38ef7d);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .score {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .verdict {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Essay Assessment Results</h2>
+        <p class="score">Score: {{ score }}/10</p>
+        <p class="verdict">Verdict: {{ verdict }}</p>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Attribute Analysis">
+        <br>
+        <a href="/submit" class="btn btn-custom">Submit Another Essay</a>
+    </div>
+</body>
+</html>

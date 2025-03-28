@@ -1,0 +1,47 @@
+<!-- submit.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Essay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
+            text-align: center;
+            padding: 100px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .btn-custom {
+            background: #00c6ff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background: #2874d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Submit Your Essay</h2>
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+            <textarea name="essay_text" class="form-control" rows="6" placeholder="Enter your essay here..."></textarea>
+            <br>
+            <input type="file" name="file" class="form-control">
+            <br>
+            <button type="submit" class="btn btn-custom">Submit Essay</button>
+        </form>
+    </div>
+</body>
+</html>
